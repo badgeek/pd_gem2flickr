@@ -1,0 +1,51 @@
+#N canvas 408 217 548 488 10;
+#X msg 71 425 reload;
+#X obj 46 463 pyext pdflickr pdflickteria;
+#X msg 125 374 init 03056e1a5eda7dd1d7ee6c1243894ead fbe5b6aacbf38aed
+;
+#X obj 46 500 print;
+#X msg 46 392 detach \$1;
+#X obj 46 368 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 46 316 loadbang;
+#X msg 46 342 1;
+#X obj 148 320 pix_write;
+#X msg 199 265 bang;
+#X obj 205 179 t b b b;
+#X msg 255 225 symbol /tmp/capture;
+#X msg 255 265 file \$1 1;
+#X text 303 351 api key \, secret hash;
+#X msg 205 434 upload /tmp/capture00000.jpg;
+#X obj 205 408 delay 200;
+#X text 168 281 path \, image quality;
+#X obj 125 350 loadbang;
+#X obj 70 38 inlet;
+#X obj 102 101 cnv 30 198 38 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 112 103 bng 35 250 50 0 empty empty empty 17 7 0 8 -258113 -1
+-1;
+#X obj 150 120 cnv 15 100 15 empty empty flickr_upload 0 0 0 18 -33289
+-262144 0;
+#X obj 101 101 cnv 8 8 38 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 139 39 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 9 0 8 0;
+#X connect 10 0 15 0;
+#X connect 10 1 9 0;
+#X connect 10 2 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 8 0;
+#X connect 14 0 1 2;
+#X connect 15 0 14 0;
+#X connect 17 0 2 0;
+#X connect 18 0 8 0;
+#X connect 20 0 10 0;
+#X connect 23 0 20 0;
+#X coords 0 -1 1 1 200 40 2 100 100;

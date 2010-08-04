@@ -1,0 +1,20 @@
+#N canvas 938 381 304 316 10;
+#X obj 35 214 modules/pdflickr;
+#X obj 84 102 gemhead;
+#X obj 84 123 pix_video;
+#X obj 182 168 gemwin;
+#X msg 182 64 dimen 640 \, 480;
+#X obj 198 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 182 35 create;
+#X msg 182 94 destroy;
+#X obj 84 146 pix_texture;
+#X obj 84 168 rectangle 4 5;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;
